@@ -13,8 +13,12 @@ public class Logear extends javax.swing.JFrame {
     /**
      * Creates new form Logear
      */
-    public Logear() {
+    Manager m;
+    
+    public Logear(Manager m) {
+        this.m=m;
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
