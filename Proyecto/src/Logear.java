@@ -1,5 +1,4 @@
 
-import java.awt.Color;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
@@ -19,14 +18,14 @@ public class Logear extends javax.swing.JFrame {
      * Creates new form Logear
      */
     Manager m;
-    boolean verdadero;
+   // boolean verdadero;
     
     public Logear(Manager m) {
         this.m=m;
         initComponents();
         setLocationRelativeTo(null);
-        jLabel3.setVisible(false);
-        verdadero=false;
+
+       // verdadero=false;
     }
 
     /**
@@ -42,10 +41,8 @@ public class Logear extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1080, 720));
 
         jLabel1.setText("juego");
 
@@ -74,21 +71,14 @@ public class Logear extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("usuario invalido");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(511, 511, 511))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(488, 488, 488))))
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(488, 488, 488))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -110,9 +100,7 @@ public class Logear extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(20, 20, 20)
+                .addGap(40, 40, 40)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(284, Short.MAX_VALUE))
         );
@@ -124,21 +112,26 @@ public class Logear extends javax.swing.JFrame {
 comenzar(); 
     }//GEN-LAST:event_jButton1ActionPerformed
     private void comenzar(){
+        if("".equals(jTextField1.getText()))
+        {
+        }
+        else
+        {
        if(jTextField1.getText().matches("^[a-zA-Z]*$")){
-            verdadero=true;
-            JOptionPane.showMessageDialog(this,"GRACIAS");
+           //verdadero=true;
+            JOptionPane.showMessageDialog(this,"BIENVENIDO");
             m.inicio.setVisible(true);
             m.logear.setVisible(false);
             m.inicio.getjLabel7().setText(jTextField1.getText());
         }else{
-            verdadero=false;
-            JOptionPane.showMessageDialog(this,"ingrese nombre porfavor");
+           // verdadero=false;
+            JOptionPane.showMessageDialog(this,"ingrese nombre valido porfavor");
+        }
         }
     }
     
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
         // TODO add your handling code here:
-jLabel3.setVisible(false);
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
 comenzar();        
         }
@@ -163,7 +156,6 @@ comenzar();
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
