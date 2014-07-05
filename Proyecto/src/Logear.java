@@ -114,6 +114,7 @@ comenzar();
     private void comenzar(){
         if("".equals(jTextField1.getText()))
         {
+            JOptionPane.showMessageDialog(this,"ingrese nombre valido porfavor");
         }
         else
         {
