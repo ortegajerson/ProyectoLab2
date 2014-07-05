@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,12 +19,14 @@ public class Logear extends javax.swing.JFrame {
      * Creates new form Logear
      */
     Manager m;
+    boolean verdadero;
     
     public Logear(Manager m) {
         this.m=m;
         initComponents();
         setLocationRelativeTo(null);
         jLabel3.setVisible(false);
+        verdadero=false;
     }
 
     /**
@@ -121,15 +124,16 @@ public class Logear extends javax.swing.JFrame {
 comenzar(); 
     }//GEN-LAST:event_jButton1ActionPerformed
     private void comenzar(){
-       String texto = jTextField1.getText();
-       if("".equals(texto)){
-                      jLabel3.setVisible(true);
-           jTextField1.setText("");
-       }else{
-       m.inicio.getjLabel7().setText(texto);
-        m.inicio.setVisible(true);
-        m.logear.setVisible(false);
-       }
+       if(jTextField1.getText().matches("^[a-zA-Z]*$")){
+            verdadero=true;
+            JOptionPane.showMessageDialog(this,"GRACIAS");
+            m.inicio.setVisible(true);
+            m.logear.setVisible(false);
+            m.inicio.getjLabel7().setText(jTextField1.getText());
+        }else{
+            verdadero=false;
+            JOptionPane.showMessageDialog(this,"ingrese nombre porfavor");
+        }
     }
     
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
