@@ -122,13 +122,13 @@ comenzar();
     }//GEN-LAST:event_jButton1ActionPerformed
     private void comenzar(){
        String texto = jTextField1.getText();
-       if(texto==""){
+       if("".equals(texto)){
+                      jLabel3.setVisible(true);
+           jTextField1.setText("");
+       }else{
        m.inicio.getjLabel7().setText(texto);
         m.inicio.setVisible(true);
         m.logear.setVisible(false);
-       }else{
-           jLabel3.setVisible(true);
-           jTextField1.setText("");
        }
     }
     
