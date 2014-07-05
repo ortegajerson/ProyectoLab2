@@ -13,8 +13,14 @@ public class memory extends javax.swing.JFrame {
     /**
      * Creates new form memory
      */
-    public memory() {
+    Manager m;
+    public memory(Manager m) {
+        this.m=m;
         initComponents();
+        setLocationRelativeTo(null);
+        
+                
+
     }
 
     /**
