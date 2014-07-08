@@ -1,6 +1,4 @@
-
-
-
+package Juego;
 
 
 import java.util.Random;
@@ -8,16 +6,19 @@ import java.util.*;
 import java.lang.*;
 
 
-public class figura {
+public class Figura {
     enum Piezas { nada, zeta, ese, linea, tee , cuadro, ele, otraele };
     private Piezas piezaFigura;
     private int cordenadas[][];
     private int[][][] cordenadasTablero;
-    public figura()
+    //constructor con las cordenadas de la pieza en el tablero
+    public Figura()
         {
         cordenadas = new int[4][2];
         ponerFigura(Piezas.nada);
         }
+    // aqui estan todos los posible valores de coordenadas para las piezas
+    //el metodo ordinal devuelve la posicion actual del objeto pieza
     public void ponerFigura(Piezas Figura)
         {
         cordenadasTablero = new int[][][]
@@ -79,11 +80,13 @@ public class figura {
             }
         return m;
         }
-    public figura rotar()
+    //funciones para rotar las figuras toma en cuenta q
+    //el cuadro no tiene caso rotarlo y lo devuelve igual
+    public Figura rotar()
         {
         if (piezaFigura == Piezas.cuadro)
             return this;
-        figura resultado = new figura();
+        Figura resultado = new Figura();
         resultado.piezaFigura = piezaFigura;
         for (int i = 0; i < 4; ++i)
             {

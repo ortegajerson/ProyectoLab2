@@ -1,3 +1,5 @@
+package Juego;
+
 
 import javax.swing.JLabel;
 
@@ -46,7 +48,6 @@ public class Inicio extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1040, 720));
 
         jLabel1.setText("juego");
 
@@ -159,6 +160,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        m.tetris.setVisible(true);
+      m.tetris.t.start();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

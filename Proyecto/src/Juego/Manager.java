@@ -1,3 +1,5 @@
+package Juego;
+
 
 
 
@@ -9,6 +11,7 @@ Logear logear;
 memory memory;
 Jugador jugador;
 Tetris tetris;
+
 
 
     public Manager(){

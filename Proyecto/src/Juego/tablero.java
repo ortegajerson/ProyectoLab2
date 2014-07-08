@@ -1,21 +1,18 @@
+package Juego;
 
-package Proyecto;
-
-
-import Tetris.figura;
-import Tetris.figura.Piezas;
-import Tetris.figura.Piezas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import static java.awt.SystemColor.control;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import Juego.Figura.Piezas;
+
 import javax.swing.Timer;
+
 
 public class tablero extends JPanel implements ActionListener{
     int ANCHO= 15;
@@ -28,12 +25,12 @@ public class tablero extends JPanel implements ActionListener{
     int posX = 0;
     int posY = 0;
     JLabel puntuacion;
-    figura posicionPieza;
+    Figura posicionPieza;
     Piezas[] tablero;
     public tablero(Tetris parent)
         {
         setFocusable(true);
-        posicionPieza = new figura();
+        posicionPieza = new Figura();
         timer = new javax.swing.Timer(600, this);
         timer.start();
         puntuacion =  parent.obtenerPuntuacion();
@@ -169,7 +166,7 @@ public class tablero extends JPanel implements ActionListener{
             }
         }
    
-    private boolean mueve(figura piezaNueva, int nuevolugarX, int nuevolugarY)
+    private boolean mueve(Figura piezaNueva, int nuevolugarX, int nuevolugarY)
         {
         for (int i = 0; i < 4; ++i)
             {

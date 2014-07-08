@@ -1,3 +1,5 @@
+package Juego;
+
 
 
 
@@ -20,13 +22,13 @@ public class Tetris extends javax.swing.JFrame {
      * Creates new form Tetris
      */
   Manager m;
+  tablero t;
     public Tetris(Manager m) {
         this.m=m;
-        initComponents();
-        add(Puntuacion,BorderLayout.SOUTH);
-        tablero tab=new tablero(this);
-        add(tab);
-        tab.start();
+        Puntuacion = new JLabel(" 0");
+        add(Puntuacion, BorderLayout.SOUTH);
+        t = new tablero(this);
+        add(t);
         setSize(200, 400);
         setTitle("Tetris");
     }
@@ -35,7 +37,6 @@ public class Tetris extends javax.swing.JFrame {
     
     public JLabel obtenerPuntuacion(){
         return Puntuacion;
-        
     }
 
     /**
