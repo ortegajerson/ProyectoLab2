@@ -11,6 +11,7 @@ Logear logear;
 memory memory;
 Jugador jugador;
 Tetris tetris;
+AdivinaNumero adivinanumero;
 
 
 
@@ -20,6 +21,7 @@ logear= new Logear(this);
 logear.setVisible(true);
 memory= new memory(this);
 tetris=new Tetris(this);
+adivinanumero= new AdivinaNumero(this);
 
 
 }
