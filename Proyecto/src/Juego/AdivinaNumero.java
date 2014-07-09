@@ -108,10 +108,7 @@ public class AdivinaNumero extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        int numero;
        numero=Integer.parseInt(jTextField1.getText());
-        intentos=0;
-        
         intentos++;
-        aleatorio = 0;
         if (numero==aleatorio){
             jTextArea1.append("FELICITACONES\n");
             jTextArea1.append("Acertastes en: "+intentos+" intentos");
