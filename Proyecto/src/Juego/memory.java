@@ -11,8 +11,9 @@ public class memory extends javax.swing.JFrame {
     boolean juegoActivo=false;
     int contadorClick=0;
     int contadorParejas=8;
-    String pareja1;
-    String pareja2;
+    int aux;
+    String pareja1="";
+    String pareja2="";
     public memory(Manager m) {
         this.m=m;
         initComponents();
@@ -85,31 +86,36 @@ public class memory extends javax.swing.JFrame {
 
         jButton3.setText("2");
 
-        jButton4.setText("4");
+        jButton4.setText("3");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("3");
+        jButton5.setText("6");
 
-        jButton6.setText("2");
+        jButton6.setText("4");
 
-        jButton7.setText("4");
+        jButton7.setText("5");
 
-        jButton8.setText("3");
+        jButton8.setText("5");
 
-        jButton9.setText("jButton9");
+        jButton9.setText("3");
 
-        jButton10.setText("jButton10");
+        jButton10.setText("7");
 
-        jButton11.setText("jButton11");
+        jButton11.setText("7");
 
-        jButton12.setText("jButton12");
+        jButton12.setText("8");
 
-        jButton13.setText("jButton13");
+        jButton13.setText("4");
 
-        jButton14.setText("jButton14");
+        jButton14.setText("6");
 
-        jButton15.setText("jButton15");
+        jButton15.setText("2");
 
-        jButton16.setText("jButton16");
+        jButton16.setText("8");
 
         iniciar.setText("iniciar");
         iniciar.addActionListener(new java.awt.event.ActionListener() {
@@ -223,17 +229,48 @@ public class memory extends javax.swing.JFrame {
        if(juegoActivo){
           contadorClick++;
          if(contadorClick==1){
+             aux=contadorClick;
         jButton1.setText(memory[0][0]);
         pareja1=memory[0][0];
          }
          if(contadorClick==2){
-         jButton1.setText(memory[0][0]);    
+             aux=contadorClick;
+         jButton1.setText(memory[0][0]); 
+         pareja2=memory[0][0];
+         contadorClick=0;   
+         }
+         if(pareja1.equals(pareja2) && contadorClick==0){
+          contadorParejas--;
+          System.out.println("parejas restante: "+contadorParejas);
+          }
+         if(pareja1.equals(pareja2)==false && contadorClick==0 && aux==2){
+            jButton1.setText("x"); 
          }
        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        if(juegoActivo){
+          contadorClick++;
+         if(contadorClick==1){
+             aux=contadorClick;
+        jButton2.setText(memory[0][3]);
+        pareja1=memory[0][3];
+         }
+         if(contadorClick==2){
+             aux=contadorClick;
+         jButton2.setText(memory[0][3]); 
+         pareja2=memory[0][3];
+         contadorClick=0;   
+         }
+         if(pareja1.equals(pareja2) && contadorClick==0){
+          contadorParejas--;
+          System.out.println("parejas restante: "+contadorParejas);
+          }
+         if(pareja1.equals(pareja2)==false && contadorClick==0 && aux==2){
+            jButton3.setText("x"); 
+         }
+       }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
@@ -260,6 +297,27 @@ public class memory extends javax.swing.JFrame {
       juegoActivo=true;
      }
     }//GEN-LAST:event_iniciarActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(juegoActivo){
+          contadorClick++;
+         if(contadorClick==1){
+             aux=contadorClick;
+        jButton4.setText(memory[3][3]);
+        pareja1=memory[3][3];
+         }
+         if(contadorClick==2){
+             aux=contadorClick;
+         jButton4.setText(memory[3][3]); 
+         pareja2=memory[3][3];
+         contadorClick=0;   
+         }
+         if(pareja1.equals(pareja2) && contadorClick==0){
+          contadorParejas--;
+          System.out.println("parejas restante: "+contadorParejas);
+          }
+       }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
