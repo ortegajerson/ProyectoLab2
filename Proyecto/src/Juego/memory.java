@@ -34,7 +34,7 @@ public class memory extends javax.swing.JFrame {
         memory[3][1]="3";
         memory[3][2]="2";
         memory[3][3]="1";
-        
+        //fgfgfg
                
     }
 
