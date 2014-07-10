@@ -22,6 +22,7 @@ public class AdivinaNumero extends javax.swing.JFrame {
     public AdivinaNumero(Manager m) {
         this.m=m;
         initComponents();
+        setLocationRelativeTo(null);
         aleatorio=(int)(Math.random() *200);
         
         
