@@ -119,9 +119,9 @@ public class AdivinaNumero extends javax.swing.JFrame {
             
         }
         else if (numero < aleatorio)
-            jTextArea1.append(numero +" debe ser mas bajo\n");
+            jTextArea1.append(numero +" debe ser mas alto\n");
         else
-            jTextArea1.append(numero+" debe ser mas alto\n");
+            jTextArea1.append(numero+" debe ser mas bajo\n");
         
         
         jTextField1.setText("");

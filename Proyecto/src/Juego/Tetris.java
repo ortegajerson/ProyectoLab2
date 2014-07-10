@@ -25,13 +25,14 @@ public class Tetris extends javax.swing.JFrame {
   tablero t;
     public Tetris(Manager m) {
         this.m=m;
+        setLocationRelativeTo(null);
         Puntuacion = new JLabel(" 0");
         add(Puntuacion, BorderLayout.SOUTH);
         t = new tablero(this);
         add(t);
         setSize(360, 720);
         setTitle("Tetris");
-    }
+        }
 
    
     
