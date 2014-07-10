@@ -52,7 +52,7 @@ public class Logear extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Leelawadee", 0, 48)); // NOI18N
         jLabel1.setForeground(java.awt.Color.blue);
         jLabel1.setText("Cerebritos");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 137, -1, 50));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, 50));
 
         jLabel2.setText("Usuario");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 267, 69, 20));
