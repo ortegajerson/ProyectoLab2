@@ -20,7 +20,7 @@ logear= new Logear(this);
 logear.setVisible(true);
 tetris=new Tetris(this);
 adivinanumero= new AdivinaNumero(this);
-
+//ksakdsa
 
 }
     public static void main(String[] args) {
