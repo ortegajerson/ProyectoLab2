@@ -23,6 +23,7 @@ public class Inicio extends javax.swing.JFrame {
         this.m=m;
         initComponents();
         setLocationRelativeTo(null);
+        setSize(1020,640);
 
         
         
