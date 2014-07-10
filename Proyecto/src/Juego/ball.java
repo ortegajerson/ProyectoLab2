@@ -34,8 +34,8 @@ public class ball {
 		} else 
 			changeDirection = false;
 		
-		//if (changeDirection) 
-		//	Sound.BALL.play();
+		if (changeDirection) 
+			Sound.BALL.play();
 
 		x = x + xa;
 		y = y + ya;
