@@ -48,8 +48,6 @@ public class AdivinaNumero extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jLabel1.setText("Encontrar numero entre 0 y 200");
 
         jButton1.setText("Jugar");
