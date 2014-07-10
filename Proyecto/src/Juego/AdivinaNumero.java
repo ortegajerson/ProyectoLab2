@@ -6,6 +6,8 @@
 
 package Juego;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jerson
@@ -111,12 +113,16 @@ public class AdivinaNumero extends javax.swing.JFrame {
        numero=Integer.parseInt(jTextField1.getText());
         intentos++;
         if (numero==aleatorio){
-            jTextArea1.append("FELICITACONES\n");
-            jTextArea1.append("Acertastes en: "+intentos+" intentos");
-            
+            JOptionPane.showMessageDialog(this, "Felicidades");
+            //jTextArea1.append("FELICITACONES\n");
+            //jTextArea1.append("Acertastes en: "+intentos+" intentos");
+            JOptionPane.showMessageDialog(this,"Acertaste en :"+intentos+" intentos");
             jButton1.setEnabled(false);
-            
             jButton2.setEnabled(true);
+            
+            m.inicio.setVisible(true);
+            m.adivinanumero.setVisible(false);
+            
             
         }
         else if (numero < aleatorio)

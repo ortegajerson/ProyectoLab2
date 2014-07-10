@@ -172,7 +172,7 @@ public class tablero extends JPanel implements ActionListener{
             timer.stop();
             star = false;
             puntuacion.setText("Perdiste");
-            
+
             }
         }
    
