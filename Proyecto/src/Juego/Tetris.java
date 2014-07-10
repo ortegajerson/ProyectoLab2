@@ -29,7 +29,7 @@ public class Tetris extends javax.swing.JFrame {
         add(Puntuacion, BorderLayout.SOUTH);
         t = new tablero(this);
         add(t);
-        setSize(200, 400);
+        setSize(360, 720);
         setTitle("Tetris");
     }
 

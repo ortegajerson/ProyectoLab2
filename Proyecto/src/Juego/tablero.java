@@ -93,7 +93,15 @@ public class tablero extends JPanel implements ActionListener{
     public void paint(Graphics g)
         {
         super.paint(g);
+        g.setColor(Color.gray);
         Dimension tamaño = getSize();
+        for (int i=1; i < tamaño.height/23; i++){
+            g.drawLine(22*i,26,22*i,tamaño.height);
+        }
+        g.setColor(Color.GRAY);
+        for (int i=1; i < tamaño.height/22 +1; i++){
+            g.drawLine(0,4+22*i,tamaño.height,4+22*i);
+        }
         int topeTableroA = (int) tamaño.getHeight() - ALTO * altoCelda();
         for (int i = 0; i < ALTO; ++i)
             {
