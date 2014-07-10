@@ -13,7 +13,7 @@ import javax.swing.JLabel;
  *
  * @author Jerson
  */
-public class Inicio extends javax.swing.JFrame {
+public class Inicio extends javax.swing.JFrame{
 
     /**
      * Creates new form Inicio
@@ -127,9 +127,11 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-m.tenist.setVisible(true);
-m.tenist.mo.pollo=true;
+
+
 m.tenist.mo.frame.setVisible(true);
+m.tenist.mo.start();
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
    

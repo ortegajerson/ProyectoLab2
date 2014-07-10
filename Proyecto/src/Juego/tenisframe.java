@@ -6,6 +6,10 @@
 
 package Juego;
 
+import java.awt.HeadlessException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author sebastian
@@ -17,10 +21,13 @@ public class tenisframe extends javax.swing.JFrame {
      */
     Manager m;
     motor mo;
-    public tenisframe(Manager m) throws InterruptedException {
-this.m=m;
-        mo =new motor(m);
+
+    public tenisframe(Manager m) {
+        this.m=m;
+        mo=new motor(m);
     }
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
