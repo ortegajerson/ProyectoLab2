@@ -127,17 +127,16 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
+m.tenist.setVisible(true);
+m.tenist.mo.pollo=true;
+m.tenist.mo.frame.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
+    
     public JLabel getjLabel7() {
         return jLabel7;
     }
-
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;

@@ -15,22 +15,27 @@ import javax.swing.JFrame;
  * @author Litoman
  */
 public class motor {
-Manager m;
+
+    Manager m;
+    Inicio inicio;
+    JFrame frame;
+    boolean pollo=false;
     public motor(Manager m) throws InterruptedException {
-    this.m=m;
-            		JFrame frame = new JFrame("Mini Tennis");
+     this.m=m;
+    
+                frame = new JFrame("Mini Tennis");
 		game game = new game();
 		frame.add(game);
 		frame.setSize(300, 400);
                 frame.setBackground(Color.red);
-		frame.setVisible(true);
+		frame.setVisible(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		while (true) {
+		while (pollo) {
 			game.moveBall();
 			game.repaint();
 			Thread.sleep(7);
 		}}
-
- 
+    
+    
 }
