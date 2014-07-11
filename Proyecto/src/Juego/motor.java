@@ -2,8 +2,6 @@ package Juego;
 
 
 import java.awt.Color;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /*
@@ -21,7 +19,7 @@ public class motor {
     Manager m;
     Inicio inicio;
     JFrame frame;
-    boolean p;
+   
     game game;
     public motor(Manager m){
      this.m=m;
@@ -31,6 +29,7 @@ public class motor {
 		frame.add(game);
 		frame.setSize(300, 400);
                 frame.setBackground(Color.red);
+                
 		frame.setVisible(false);
                 
     }

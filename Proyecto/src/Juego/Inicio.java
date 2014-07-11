@@ -121,7 +121,7 @@ public class Inicio extends javax.swing.JFrame{
 
       m.tetris.setVisible(true);
       m.tetris.t.start();
-    
+      
       
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -136,7 +136,7 @@ public class Inicio extends javax.swing.JFrame{
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 m.tenist.mo.frame.setVisible(true);
 m.tenist.mo.start();
-Sound.BACK.loop();
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
    

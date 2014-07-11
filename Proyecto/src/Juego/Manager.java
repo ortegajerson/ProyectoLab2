@@ -8,7 +8,6 @@ package Juego;
 public class Manager {
 Inicio inicio;
 Logear logear;
-Jugador jugador;
 Tetris tetris;
 AdivinaNumero adivinanumero;
 tenisframe tenist;

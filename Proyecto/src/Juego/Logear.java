@@ -91,6 +91,7 @@ public class Logear extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 comenzar(); 
+
     }//GEN-LAST:event_jButton1ActionPerformed
     private void comenzar(){
         if("".equals(jTextField1.getText()))
@@ -102,6 +103,7 @@ comenzar();
        if(jTextField1.getText().matches("^[a-zA-Z]*$")){
            //verdadero=true;
             JOptionPane.showMessageDialog(this,"BIENVENIDO");
+            Sound.BACK.loop();
             m.inicio.setVisible(true);
             m.logear.setVisible(false);
             m.inicio.getjLabel7().setText(jTextField1.getText());

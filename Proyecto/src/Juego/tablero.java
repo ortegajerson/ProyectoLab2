@@ -10,7 +10,6 @@ import java.awt.event.KeyEvent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import Juego.Figura.Piezas;
-import Juego.Manager;
 
 import javax.swing.Timer;
 
@@ -39,6 +38,7 @@ public class tablero extends JPanel implements ActionListener{
         addKeyListener(new control());
         limpiaTablero();
         }
+          
      public void actionPerformed(ActionEvent e)
         {
         if (terminaDeCaer)
@@ -172,7 +172,6 @@ public class tablero extends JPanel implements ActionListener{
             timer.stop();
             star = false;
             puntuacion.setText("Perdiste");
-
             }
         }
    

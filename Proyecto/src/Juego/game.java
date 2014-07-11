@@ -47,11 +47,11 @@ public class game extends JPanel{
 	}
         
         public void gameOver() {
-                Sound.BACK.stop();
 		Sound.GAMEOVER.play();
 		JOptionPane.showMessageDialog(this, "your score is: " + getScore(),
 				"Game Over", JOptionPane.YES_NO_OPTION);
 		System.exit(ABORT);
+		
 	}
 
 	@Override
